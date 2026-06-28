@@ -10,6 +10,8 @@ else:
         print("image converted to grayscale, do you want to see?")
         uin = input("Enter 'yes' or 'no': ")
         if uin.lower() == "yes":
+            cv2.namedWindow('Gray Image', cv2.WINDOW_NORMAL)
+            cv2.resizeWindow('Gray Image', 600, 400)
             cv2.imshow('Gray Image', gray)
             cv2.waitKey(0)
             cv2.destroyAllWindows()
